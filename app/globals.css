@@ -10,7 +10,7 @@ html, body { min-height: 100%; margin: 0; }
 body { background: #111918; color: var(--ink); font-family: 'DM Sans', sans-serif; }
 button, a { font: inherit; }
 .landing { position: relative; min-height: 100svh; overflow: hidden; isolation: isolate; display: flex; flex-direction: column; padding: 0 clamp(28px, 7.2vw, 112px); }
-.backdrop { position: absolute; z-index: -3; inset: 0; background-image: linear-gradient(90deg, rgba(10,19,18,.72) 0%, rgba(10,19,18,.59) 44%, rgba(10,19,18,.42) 100%), linear-gradient(0deg, rgba(8,15,14,.38), transparent 38%), url('/ithmar-background-hd.jpeg'); background-size: cover; background-position: center 52%; transform: scale(1.025); animation: reveal 1.2s ease-out both; }
+.backdrop { position: absolute; z-index: -3; inset: 0; background: #111918; }
 .backdrop::after { content: ''; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 0 59%, rgba(194,163,102,.09) 59.1%, transparent 59.4%), linear-gradient(115deg, transparent 0 62%, rgba(255,255,255,.035) 62.1%, transparent 62.25%); }
 .grain { pointer-events: none; position: absolute; z-index: -1; inset: 0; opacity: .12; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E"); }
 .header { height: 112px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,.16); animation: rise .8s .08s both; }
@@ -65,7 +65,6 @@ h1 em { color: var(--gold); font-style: normal; font-weight: 400; }
 @media (max-width: 700px) {
   .landing { padding: 0 25px; }
   .landing { background: #111918; }
-  .backdrop { background-image: linear-gradient(180deg, rgba(10,19,18,.25) 0%, rgba(10,19,18,.46) 55%, #111918 100%), url('/ithmar-background-hd.jpeg'); background-size: 100% 100%, 100% auto; background-position: center, center top; background-repeat: no-repeat; transform: none; }
   .backdrop::after { display: none; }
   .header { height: 86px; }
   .brand { width: 143px; }
@@ -73,7 +72,7 @@ h1 em { color: var(--gold); font-style: normal; font-weight: 400; }
   .status { font-size: 7px; }
   .languages { font-size: 9px; }
   .hero { min-height: 580px; align-items: flex-start; }
-  .hero-copy { padding: 258px 0 82px; }
+  .hero-copy { padding: 70px 0 82px; }
   .eyebrow { font-size: 8px; margin-bottom: 24px; }
   h1 { font-size: clamp(39px, 10vw, 62px); }
   .description { max-width: 430px; font-size: 13px; }
@@ -127,7 +126,7 @@ h1 { font-size: clamp(44px, 5.8vw, 78px); line-height: 1.05; letter-spacing: -.0
 @keyframes counter-arrive { from { opacity: .45; transform: rotateX(-22deg) translateY(7px) scale(.98); } to { opacity: 1; transform: rotateX(4deg) translateY(0) scale(1); } }
 @media (max-width: 700px) {
   .hero { text-align: left; }
-  .hero-copy { padding: 258px 0 82px; }
+  .hero-copy { padding: 70px 0 82px; }
   h1 { font-size: clamp(36px, 8.5vw, 54px); line-height: 1.08; }
   .description { margin: 24px 0 0; }
   .countdown { gap: clamp(8px, 3vw, 16px); }
